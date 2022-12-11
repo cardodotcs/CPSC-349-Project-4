@@ -1,2 +1,4 @@
-# CPSC-349-Exercise-4
-Ricardo Gonzalez Email: rickardo@csu.fullerton.edu
+# CPSC-349-Project-4
+Ricardo Gonzalez rickardo@csu.fullerton.edu
+
+Daisy Catalan dcatalan@csu.fullerton.edu
