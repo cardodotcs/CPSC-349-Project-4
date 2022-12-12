@@ -1,13 +1,13 @@
 # CPSC-349-Project-4
 
-# Team 
+## Team 
 Ricardo Gonzalez rickardo@csu.fullerton.edu
 
 Daisy Catalan dcatalan@csu.fullerton.edu
 
-# Steps 
+## Steps 
 
-Clone the cpsc349-project1 repository locally:
+Clone the CPSC-349-Project-4 repository locally:
 
 ```shell-session
 git clone https://github.com/cardogg/CPSC-349-Project-4.git
