@@ -5,6 +5,7 @@ Ricardo Gonzalez rickardo@csu.fullerton.edu
 
 Daisy Catalan dcatalan@csu.fullerton.edu
 
+Shiv Bhagat sbhagat101@csu.fullerton.edu
 ## Steps 
 
 Clone the CPSC-349-Project-4 repository locally:
