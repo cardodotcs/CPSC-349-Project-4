@@ -7,8 +7,9 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "pocketbase": "./pocketbase serve",
     "esbuild": "esbuild src/app.jsx --outfile=pb_public/app.js --watch",
+    "tailwind": "npx tailwindcss -i ./src/input.css -o ./pb_public/output.css --watch",
     "browsersync": "browser-sync http://localhost:8090 --files 'pb_public/**/*'",
-    "start": "npm-run-all --parallel esbuild pocketbase browsersync"
+    "start": "npm-run-all --parallel esbuild pocketbase tailwind browsersync"
   },
   "author": "",
   "license": "ISC",
@@ -16,5 +17,10 @@
     "esbuild": "0.16.4",
     "npm-run-all": "^4.1.5",
     "run-all": "^1.0.1"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.4.13",
+    "postcss": "^8.4.20",
+    "tailwindcss": "^3.2.4"
   }
 }
