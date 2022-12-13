@@ -1,3 +1,4 @@
+// log in with this info, then add yourself as an admin in settings -> Admins 
 const USERNAME = 'rickardo@csu.fullerton.edu'
 const PASSWORD = 'password1.'
 
