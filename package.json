@@ -8,7 +8,8 @@
     "pocketbase": "./pocketbase serve",
     "esbuild": "esbuild src/app.jsx --outfile=pb_public/app.js --watch",
     "browsersync": "browser-sync http://localhost:8090 --files 'pb_public/**/*'",
-    "start": "npm-run-all --parallel esbuild pocketbase browsersync"
+    "tailwind": "tailwindcss -i src/input.css -o pb_public/output.css --watch",
+    "start": "npm-run-all --parallel esbuild pocketbase tailwind browsersync"
   },
   "author": "",
   "license": "ISC",
@@ -16,5 +17,8 @@
     "esbuild": "0.16.4",
     "npm-run-all": "^4.1.5",
     "run-all": "^1.0.1"
+  },
+  "devDependencies": {
+    "tailwindcss": "^3.2.4"
   }
 }
