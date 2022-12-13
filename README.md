@@ -25,8 +25,15 @@ Open the [Site][1]
 
 Open the [PocketBase Admin UI][2]
 
+
+## Notes
+
+We are using the [prebuilt minimal PocketBase app][3] for **Linux**.   
+
 [1]: http://localhost:3000/
 [2]: http://127.0.0.1:8090/_/
+[3]: https://pocketbase.io/docs/
+
 
 
 
