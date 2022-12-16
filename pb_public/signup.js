@@ -8,7 +8,7 @@ async function signupInfo() {
     // var name = document.getElementById("name").value
     var password = document.getElementById("password").value
     var passwordConfirm = document.getElementById("password-confirm").value
-    // var email = document.getElementById("email").value
+    var email = document.getElementById("email").value
 
 
     // console.log("Entered:  " + username + " " + name + " " + email + " " + password + " " + passwordConfirm)
@@ -30,6 +30,7 @@ async function signupInfo() {
 
     const recordTest = await pb.collection('users').create({
         username:  username,
+        email: email,
         password: "'" + password + "'",
         passwordConfirm: "'" + passwordConfirm + "'",
     });
