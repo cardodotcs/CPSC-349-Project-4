@@ -7,7 +7,9 @@ console.log("home page")
 console.log(Username)
 console.log(Password)
 
-
+if(!Username){
+    window.location.replace('login.html')
+}
 // you can also fetch all records at once via getFullList
 const records = await pb.collection('posts').getFullList(200 /* batch size */, {
     sort: '-created',
@@ -116,8 +118,4 @@ async function logout() {
 
 if(Username){
     document.getElementById("home").href = "/home.html"
-}
-
-if(!Username){
-    window.location.replace('login.html')
 }
