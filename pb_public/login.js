@@ -3,6 +3,10 @@ import { pb } from './main.js'
 // i made a login.js page but I am not sure if we are just going to use one js file instead because of the Pocketbase line above. We can just rename it to main.js 
 
 // Log in the User if they Exist in the Database
+//var Username = sessionStorage.getItem('Username');
+//if(Username){
+    //window.location.replace('home.html')
+//}
 async function loginInfo() {
 
     console.log("Getting Login Input")
@@ -57,9 +61,6 @@ const testing = document.getElementById("testing")
 if (loginButton) {
 loginButton.addEventListener('click', loginInfo)
 }
-
-
-
 
 
 

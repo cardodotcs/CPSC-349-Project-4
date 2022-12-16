@@ -7,7 +7,9 @@ console.log("home page")
 console.log(Username)
 console.log(Password)
 
-
+if(!Username){
+    window.location.replace('login.html')
+}
 // you can also fetch all records at once via getFullList
 const records = await pb.collection('posts').getFullList(200 /* batch size */, {
     sort: '-created',
@@ -108,4 +110,12 @@ if (logoutButt) {
 
 async function logout() {
     sessionStorage.clear()
+}
+
+// TO DO
+// Done by shiv
+// need to make sure that when we click on the home button it doesn't go to index.html
+
+if(Username){
+    document.getElementById("home").href = "/home.html"
 }
