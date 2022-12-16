@@ -109,3 +109,15 @@ if (logoutButt) {
 async function logout() {
     sessionStorage.clear()
 }
+
+// TO DO
+// Done by shiv
+// need to make sure that when we click on the home button it doesn't go to index.html
+
+if(Username){
+    document.getElementById("home").href = "/home.html"
+}
+
+if(!Username){
+    window.location.replace('login.html')
+}
