@@ -94,6 +94,18 @@ for (const record of records) {
 }
 
 
+
 // TO DO
+// Done by R
 // NEED TO CLEAR USERNAME AND LOGIN ONCE USER PRESSES LOGOUT BUTTON
 // sessionStorage.clear();
+const logoutButt = document.getElementById("logout")
+
+// Add Event Listener to Login Button (if it exists) and Listen for Click Event. Run Login Function if clicked. 
+if (logoutButt) {
+    logoutButt.addEventListener('click', logout)
+}
+
+async function logout() {
+    sessionStorage.clear()
+}
