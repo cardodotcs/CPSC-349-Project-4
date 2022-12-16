@@ -60,6 +60,3 @@ loginButton.addEventListener('click', loginInfo)
 
 
 
-
-
-
