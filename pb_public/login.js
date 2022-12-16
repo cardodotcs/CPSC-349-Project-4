@@ -10,7 +10,7 @@ async function loginInfo() {
     var password = document.getElementById("password").value
 
     console.log("your username is " + username + " and your password is " + password)
-
+    
     // currently only logging in users collection
     const userData = await pb.collection('users').authWithPassword(
         username,
