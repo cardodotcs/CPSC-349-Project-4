@@ -27,7 +27,7 @@ const mainTag = document.querySelector('main')
 for (const record of records) {
     console.log("hi")
 
-    // CREATE ARTICLE ELEMENT
+    // CREATE ARTICLE ELEMENT and APPEND it as child element to article 
     const article = document.createElement('article')
     article.setAttribute('record-post-id', record.id)
 
@@ -36,9 +36,23 @@ for (const record of records) {
     headline.textContent = record.headline
 
         // add style to headline
-        headline.classList.add('underline')
+        headline.classList.add('bg-red-500')
 
     article.appendChild(headline)
+
+    // MAYBE just remove image if we cant get it to display right
+    // CREATE FEATURED_IMAGE ELEMENT and APPEND it as child element to article 
+    // i am adding uploading images (using admin ui) i got from pexels btw we probably need to make a note of that to credit pexels
+    const featuredImage = document.createElement('img')
+    const featuredImageSrc = 'http://127.0.0.1:8090/api/files/posts/' + record.id + '/' + record.featured_image + '?thumb=0x500'
+    console.log(featuredImageSrc)
+    featuredImage.setAttribute('src', featuredImageSrc)
+
+        // add style to featured_image
+        featuredImage.classList.add('w-16','h-auto')
+        
+
+    article.appendChild(featuredImage)
 
 
     //to be continued
