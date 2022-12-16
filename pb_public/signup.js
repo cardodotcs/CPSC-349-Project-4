@@ -8,18 +8,17 @@ async function signupInfo() {
     var password = document.getElementById("password").value
     var email = document.getElementById("email").value
 
-    try {
-        const user = await pb.collection('users').create({
-            username: username,
-            name: name,
-            email: email,
-            password: password
-        });
+    const user = await pb.collection('users').create({
+        username: username,
+        name: name,
+        email: email,
+        password: password
+    });
 
-        window.location.replace('login.html')
-    } catch (error) {
-        throw("error", err)
-    }
+    console.log(user)
+
+    window.location.replace('login.html')
+    
 
     // "logout" the last authenticated account
     // pb.authStore.clear();
