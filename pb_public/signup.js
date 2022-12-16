@@ -5,7 +5,7 @@ async function signupInfo() {
     console.log("Getting Account Input")
     var username = document.getElementById("username-sign-in").value
     console.log(username)
-    // var name = document.getElementById("name").value
+    //var name = document.getElementById("name").value
     var password = document.getElementById("password").value
     var passwordConfirm = document.getElementById("password-confirm").value
     var email = document.getElementById("email").value
@@ -37,8 +37,13 @@ async function signupInfo() {
 
     // (optional) send an email verification request
     // await pb.collection('users').requestVerification(email);
-
-
+    
+    //const updateName = await pb.collection('users').update(
+    //    username.id,
+    //    {
+    //       name: name
+    //    }
+    //)
 
     // const user = await pb.collection('users').create({
     //     username: username,
