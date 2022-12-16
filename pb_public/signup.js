@@ -3,29 +3,36 @@ import { pb } from './main.js'
 async function signupInfo() {
 
     console.log("Getting Account Input")
-    var username = document.getElementById("username").value
-    var name = document.getElementById("name").value
+    var username = document.getElementById("username-sign-in").value
+    console.log(username)
+    // var name = document.getElementById("name").value
     var password = document.getElementById("password").value
     var passwordConfirm = document.getElementById("password-confirm").value
-    var email = document.getElementById("email").value
+    // var email = document.getElementById("email").value
 
 
-    console.log("Entered:  " + username + " " + name + " " + email + " " + password + " " + passwordConfirm)
+    // console.log("Entered:  " + username + " " + name + " " + email + " " + password + " " + passwordConfirm)
 
-    console.log(JSON.stringify(username))
+    
+   
 
     // example create data (auth acount requires password and and password confirm)
     // also in the users api rules i removed the api rule id = @request.auth.id for the create action - custom rule
-    const data = {
-        // "username": JSON.stringify(username),
-        // "email": JSON.stringify(email),
-        // "emailVisibility": true,
-        "password": JSON.stringify(password),
-        "passwordConfirm": JSON.stringify(passwordConfirm),
-        // "name": JSON.stringify(name)
-    };
+    // const data = {
+    //     // "username": JSON.stringify(userName),
+    //     "password": JSON.stringify(password),
+    //     "passwordConfirm": JSON.stringify(passwordConfirm),
+    // };
 
-    const record = await pb.collection('users').create(data);
+    console.log("TYPING USERNAME BELOW")
+    console.log(JSON.stringify(username))
+    //const record = await pb.collection('users').create(data);
+
+    const recordTest = await pb.collection('users').create({
+        username:  username,
+        password: "'" + password + "'",
+        passwordConfirm: "'" + passwordConfirm + "'",
+    });
 
     // (optional) send an email verification request
     // await pb.collection('users').requestVerification(email);
