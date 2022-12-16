@@ -15,8 +15,6 @@ async function signupInfo() {
         password: password
     });
 
-    console.log(user)
-
     window.location.replace('login.html')
     
 
