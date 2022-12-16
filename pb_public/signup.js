@@ -31,8 +31,8 @@ async function signupInfo() {
     const recordTest = await pb.collection('users').create({
         username:  username,
         email: email,
-        password: "'" + password + "'",
-        passwordConfirm: "'" + passwordConfirm + "'",
+        password: password,
+        passwordConfirm: passwordConfirm,
     });
 
     // (optional) send an email verification request
