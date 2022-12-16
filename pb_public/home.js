@@ -16,7 +16,7 @@ const records = await pb.collection('posts').getFullList(200 /* batch size */, {
 console.log(records)
 
 // RECORD FROM POSTS COLLECTION CONTAINS COLUMNS:
-// id, created, updated, headline, featured_image, user, article
+// id, created, updated, headline, featured_image, user, body
 
 
 // ***************DISPLAY EXISTING POSTS FOR USER***********
@@ -30,6 +30,9 @@ for (const record of records) {
     // CREATE ARTICLE ELEMENT and APPEND it as child element to article 
     const article = document.createElement('article')
     article.setAttribute('record-post-id', record.id)
+
+        //add style to article
+        article.classList.add('border-8', 'border-indigo-600', 'm-3')
 
     // CREATE HEADING 2 ELEMENT
     const headline = document.createElement('h2')
@@ -55,7 +58,36 @@ for (const record of records) {
     article.appendChild(featuredImage)
 
 
-    //to be continued
+    // CREATE Header 3 Element (to display username) and append it as a child element to article
+    const authorByLine = document.createElement('h3')
+    console.log("record logs below")
+    console.log(record.id)
+    console.log(record.user)
+    console.log(record)
+
+    // record.user is a relation id so i need to access the user collection to get the actual user name ? 
+    const recordUserName = await pb.collection('users').getOne(record.user, {})
+    console.log("THE ONE USER RECORD TO RETRIEVE NAME")
+    console.log(recordUserName)
+    console.log(recordUserName.name)
+
+
+    authorByLine.textContent = recordUserName.name
+
+        // add style to author by line
+        authorByLine.classList.add('text-purple-400')
+    
+    article.appendChild(authorByLine)
+
+
+    // CREATE paragraph element (to display body) and append it as a child element to article
+    const body = document.createElement('p')
+    body.textContent = record.body
+
+        // add style to body 
+        body.classList.add('text-center')
+
+    article.appendChild(body)
 
 
     mainTag.appendChild(article)
