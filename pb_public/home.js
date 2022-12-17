@@ -97,13 +97,16 @@ for (const record of records) {
 
 
 // ***************CREATE NEW POST FOR LOGGED IN USER***********
+// NOT WORKING 
 
 // get create post variables from html DOM
 var createHeadline = document.getElementById('create-headline').value
 // create image file upload 
-var createBody = document.getElementById('create-body')
+var createBody = document.getElementById('create-body').value
 
-console.log(createHeadline)
+
+
+window.alert(createHeadline)
 
 
 // createPostButton function
@@ -113,13 +116,11 @@ async function createPost() {
     const createPost = await pb.collection('posts').create({
         headline: createHeadline,
         body: createBody,
-        // email: email,
-        // password: password,
-        // passwordConfirm: passwordConfirm,
-        // name: name,
     });
 
-    console.log(createPost.headline)
+
+
+    // console.log(createPost.headline)
     console.log("end of createPostButton() function call")
 }
 
