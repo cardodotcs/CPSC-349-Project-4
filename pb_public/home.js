@@ -7,7 +7,7 @@ console.log("home page")
 console.log(Username)
 console.log(Password)
 
-if(!Username){
+if (!Username) {
     window.location.replace('login.html')
 }
 // you can also fetch all records at once via getFullList
@@ -54,7 +54,7 @@ for (const record of records) {
     featuredImage.setAttribute('src', featuredImageSrc)
 
     // add style to featured_image
-    featuredImage.classList.add('w-16','h-auto')
+    featuredImage.classList.add('w-16', 'h-auto')
 
 
     article.appendChild(featuredImage)
@@ -97,40 +97,33 @@ for (const record of records) {
 
 
 // ***************CREATE NEW POST FOR LOGGED IN USER***********
-// NOT WORKING 
-
-// get create post variables from html DOM
-var createHeadline = document.getElementById('create-headline').value
-// create image file upload 
-var createBody = document.getElementById('create-body').value
 
 
 
-window.alert(createHeadline)
+async function createPostFunction() {
 
 
-// createPostButton function
-async function createPost() {
-    console.log('calling createPost()')
+    console.log("within create post function")
 
-    const createPost = await pb.collection('posts').create({
-        headline: createHeadline,
-        body: createBody,
-    });
+    var myHeadline = document.getElementById("my-headline").value;
+    var myBody = document.getElementById("my-body").value
+
+    console.log("Getting create post Input")
+    console.log("")
+    console.log(myHeadline)
+    console.log(myBody)
 
 
 
-    // console.log(createPost.headline)
-    console.log("end of createPostButton() function call")
+
 }
 
-// event listener for create post button
+
 const createPostButton = document.getElementById('create-post-button')
 
 if (createPostButton) {
-    createPostButton.addEventListener('click', createPost)
+    createPostButton.addEventListener('click', createPostFunction)
 }
-
 
 
 
@@ -155,6 +148,6 @@ async function logout() {
 // Done by shiv
 // need to make sure that when we click on the home button it doesn't go to index.html
 
-if(Username){
+if (Username) {
     document.getElementById("home").href = "/home.html"
 }
