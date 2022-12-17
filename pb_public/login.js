@@ -24,6 +24,9 @@ async function loginInfo() {
     console.log(userData)
     console.log(userData.record)
     console.log("user email info " + userData.record.email)
+    console.log("user id info " + userData.record.id)
+    
+    var userid = userData.record.id
 
     // after the above you can also access the auth data from the authStore
     console.log("pb.authStore.isValid" + pb.authStore.isValid);
@@ -39,6 +42,8 @@ async function loginInfo() {
         sessionStorage.setItem('Username', username);
 
         sessionStorage.setItem('Password', password);
+
+        sessionStorage.setItem('Userid', userid), 
 
        // if the user exists redirect them to home page (aka blog page)
        window.location.replace('home.html')

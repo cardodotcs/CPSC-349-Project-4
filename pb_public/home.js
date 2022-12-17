@@ -2,12 +2,13 @@ import { pb } from './main.js'
 
 var Username = sessionStorage.getItem('Username');
 var Password = sessionStorage.getItem('Password');
+// get user id from session storage
 
 console.log("home page")
 console.log(Username)
 console.log(Password)
 
-if(!Username){
+if (!Username) {
     window.location.replace('login.html')
 }
 // you can also fetch all records at once via getFullList
@@ -23,7 +24,7 @@ console.log(records)
 
 // ***************DISPLAY EXISTING POSTS FOR USER***********
 
-const mainTag = document.querySelector('main')
+const existingPostsContainer = document.getElementById('existing-posts-container')
 
 // BASED ON EXERCISE 3 HOMEWORK fyi
 for (const record of records) {
@@ -33,15 +34,15 @@ for (const record of records) {
     const article = document.createElement('article')
     article.setAttribute('record-post-id', record.id)
 
-        //add style to article
-        article.classList.add('border-8', 'border-indigo-600', 'm-3')
+    //add style to article
+    article.classList.add('border-8', 'border-indigo-600', 'm-3')
 
     // CREATE HEADING 2 ELEMENT
     const headline = document.createElement('h2')
     headline.textContent = record.headline
 
-        // add style to headline
-        headline.classList.add('bg-red-500')
+    // add style to headline
+    headline.classList.add('bg-red-500')
 
     article.appendChild(headline)
 
@@ -53,9 +54,9 @@ for (const record of records) {
     console.log(featuredImageSrc)
     featuredImage.setAttribute('src', featuredImageSrc)
 
-        // add style to featured_image
-        featuredImage.classList.add('w-16','h-auto')
-        
+    // add style to featured_image
+    featuredImage.classList.add('w-16', 'h-auto')
+
 
     article.appendChild(featuredImage)
 
@@ -76,9 +77,9 @@ for (const record of records) {
 
     authorByLine.textContent = recordUserName.name
 
-        // add style to author by line
-        authorByLine.classList.add('text-purple-400')
-    
+    // add style to author by line
+    authorByLine.classList.add('text-purple-400')
+
     article.appendChild(authorByLine)
 
 
@@ -86,17 +87,55 @@ for (const record of records) {
     const body = document.createElement('p')
     body.textContent = record.body
 
-        // add style to body 
-        body.classList.add('text-center')
+    // add style to body 
+    body.classList.add('text-center')
 
     article.appendChild(body)
 
 
-    mainTag.appendChild(article)
+    existingPostsContainer.appendChild(article)
+}
+
+
+// ***************CREATE NEW POST FOR LOGGED IN USER***********
+
+
+
+async function createPostFunction() {
+
+    console.log("within create post function")
+
+    var myHeadline = document.getElementById("my-headline").value;
+    var myBody = document.getElementById("my-body").value
+    var myUserId = "qjnrpg0p3aybdon"
+
+    console.log("Getting create post Input")
+    console.log("")
+    console.log(myHeadline)
+    console.log(myBody)
+
+    const postRecord = await pb.collection('posts').create({
+        headline: myHeadline,
+        body: myBody,
+        user: myUserId,
+    })
+
+
+
+
+}
+
+
+const createPostButton = document.getElementById('create-post-button')
+
+if (createPostButton) {
+    createPostButton.addEventListener('click', createPostFunction)
 }
 
 
 
+
+// ************************LOG OUT USER************************
 // TO DO
 // Done by R
 // NEED TO CLEAR USERNAME AND LOGIN ONCE USER PRESSES LOGOUT BUTTON
@@ -116,6 +155,6 @@ async function logout() {
 // Done by shiv
 // need to make sure that when we click on the home button it doesn't go to index.html
 
-if(Username){
+if (Username) {
     document.getElementById("home").href = "/home.html"
 }
