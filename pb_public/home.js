@@ -113,6 +113,11 @@ async function createPostFunction() {
     console.log(myHeadline)
     console.log(myBody)
 
+    const postRecord = await pb.collection('posts').create({
+        headline: myHeadline,
+        body: myBody,
+    })
+
 
 
 
