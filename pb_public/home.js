@@ -23,7 +23,7 @@ console.log(records)
 
 // ***************DISPLAY EXISTING POSTS FOR USER***********
 
-const mainTag = document.querySelector('main')
+const existingPostsContainer = document.getElementById('existing-posts-container')
 
 // BASED ON EXERCISE 3 HOMEWORK fyi
 for (const record of records) {
@@ -92,7 +92,7 @@ for (const record of records) {
     article.appendChild(body)
 
 
-    mainTag.appendChild(article)
+    existingPostsContainer.appendChild(article)
 }
 
 

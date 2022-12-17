@@ -2,115 +2,118 @@
 <html lang="en">
 
 <head>
-    <title>CPSC 349 - Exercise 4</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="output.css" rel="stylesheet">
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Blog Engine</title>
-    <script type="module" src="app.js"></script>
-    <script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
-    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
-    <script crossorigin src="https://unpkg.com/pocketbase@0.8.1/dist/pocketbase.umd.js"></script>
-    
-    <script type="module" src="main.js"></script>
-    <script type="module" src="login.js"></script>
-    <script type="module" src="home.js"></script>
+  <title>CPSC 349 - Exercise 4</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="output.css" rel="stylesheet">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blog Engine</title>
+  <script type="module" src="app.js"></script>
+  <script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+  <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+  <script crossorigin src="https://unpkg.com/pocketbase@0.8.1/dist/pocketbase.umd.js"></script>
+
+  <script type="module" src="main.js"></script>
+  <script type="module" src="login.js"></script>
+  <script type="module" src="home.js"></script>
 </head>
 
-<body data-user-is-not-logged-in data-user-is-not-page-author data-base-route>
-  <!-- trying to find main app page -->
+<body>
 
-  <div id="testing"></div>
 
-   <!-- currently if i add a new record, i have to press reload manually to be able to display the newly created record-->
-  <main>
-    
-  </main>
-
- 
   <!-- example image path (i cliked on an image and it took me here )-->
   <!-- https://pocketbase.io/docs/files-handling -->
   <!-- <img src="http://127.0.0.1:8090/api/files/34a61ab4tqi3oep/rwpiov26zcmt7fi/pexels_pixabay_53594_FcsjxHooE2.jpg"> -->
 
-  
-  <h1>HI THIS IS WHERE THE BLOGS WILL BE CREATED!! I was just trying to find the main app page i was getting lost lol</h1>
-    <header class="text-gray-600 body-font">
-        <div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
-          <nav class="flex lg:w-2/5 flex-wrap items-center text-base md:ml-auto">
-            <a id  = "home" class="mr-5 hover:text-gray-900" style="color: rgb(0, 119, 255)" href="/">Home</a>
-            <a class="mr-5 hover:text-gray-900" style="color: rgb(0, 119, 255)" href="about.html">About</a>
-          </nav>
-          <a  id="home"class="flex order-first lg:order-none lg:w-1/5 title-font font-medium items-center text-gray-900 lg:items-center lg:justify-center mb-4 md:mb-0">
-            <img src="https://www.onblastblog.com/wp-content/uploads/2017/08/blogger-logo.jpg" class="w-12 h-12 text-white p-2 rounded-full" alt="logo">
-              
-            
-            <span class="ml-3 text-xl" style="color: rgb(0, 119, 255)">Blog Engine</span></a>
-          <div class="lg:w-2/5 inline-flex lg:justify-end ml-5 lg:ml-0">
-            <a class="inline-flex items-center bg-gray-100 border-0 py-1 px-3 focus:outline-none hover:bg-gray-200 rounded text-base mt-4 md:mt-0" id="logout" href="/">Logout 
-              <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-1" viewBox="0 0 24 24">
-                <path d="M5 12h14M12 5l7 7-7 7"></path>
-              </svg>
-            </a>
-          </div>
-        </div>
-      </header>
-    
-    
-    <div>
-      <h2 style="text-align: center;">Blogs</h2>
-      <div class="flex flex-wrap -m-4" style="display: block; margin-left: auto; margin-right: auto;">
-        <div class="p-4 md:w-1/2 w-full" style="display: block; margin-left: auto; margin-right: auto;">
-          <div class="h-full bg-gray-100 p-8 rounded" style="display: block; margin-left: auto; margin-right: auto;">
-          </div>
-        </div>
+
+  <header class="text-gray-600 body-font">
+    <div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
+      <nav class="flex lg:w-2/5 flex-wrap items-center text-base md:ml-auto">
+        <a id="home" class="mr-5 hover:text-gray-900" style="color: rgb(0, 119, 255)" href="/">Home</a>
+        <a class="mr-5 hover:text-gray-900" style="color: rgb(0, 119, 255)" href="about.html">About</a>
+      </nav>
+      <a id="home"
+        class="flex order-first lg:order-none lg:w-1/5 title-font font-medium items-center text-gray-900 lg:items-center lg:justify-center mb-4 md:mb-0">
+        <img src="https://www.onblastblog.com/wp-content/uploads/2017/08/blogger-logo.jpg"
+          class="w-12 h-12 text-white p-2 rounded-full" alt="logo">
+
+
+        <span class="ml-3 text-xl" style="color: rgb(0, 119, 255)">Blog Engine</span></a>
+      <div class="lg:w-2/5 inline-flex lg:justify-end ml-5 lg:ml-0">
+        <a class="inline-flex items-center bg-gray-100 border-0 py-1 px-3 focus:outline-none hover:bg-gray-200 rounded text-base mt-4 md:mt-0"
+          id="logout" href="/">Logout
+          <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+            class="w-4 h-4 ml-1" viewBox="0 0 24 24">
+            <path d="M5 12h14M12 5l7 7-7 7"></path>
+          </svg>
+        </a>
       </div>
-      
-      &nbsp;
-      <button class="add-blog" style="display: block; margin-left: auto; margin-right: auto;">Add Blogs</button>
     </div>
-    </body>
-    <footer class="text-gray-600 body-font" style="position:relative; top: auto;">
-      <div class="container px-5 py-24 mx-auto flex md:items-center lg:items-start md:flex-row md:flex-nowrap flex-wrap flex-col">
-        <div class="w-64 flex-shrink-0 md:mx-0 mx-auto text-center md:text-left md:mt-0 mt-10" style="position: relative; top: 150px;">
-          <a class="flex title-font font-medium items-center md:justify-start justify-center text-gray-900">
-            <img src="https://www.onblastblog.com/wp-content/uploads/2017/08/blogger-logo.jpg" class="w-12 h-12 text-white p-2 rounded-full" alt="logo">
-              
-          
-            <span class="ml-3 text-xl">Blog Engine</span>
-          </a>
-          <p class="mt-2 text-sm text-gray-500">The place to satisfy all your blogging needs</p>
-        </div>
-        <div class="flex-grow flex flex-wrap md:pr-20 -mb-10 md:text-left text-center order-first" style="position: relative; top: 150px; right: auto;">
-          <div class="lg:w-1/4 md:w-1/2 w-full px-4">
-            <h2 class="title-font font-medium text-gray-900 tracking-widest text-sm mb-3" style="font-size: 20px;">Links</h2>
-            <nav class="list-none mb-10">
-              <ul>
-                <li>
-                  <a style="color: rgb(0, 119, 255)" href="about">About Us</a>
-                </li>
-                <li>
-                  <a class="text-gray-600 hover:text-gray-800" style="color: rgb(0, 119, 255)" href="https://pocketbase.io/">Pocketbase</a>
-                </li>
-                <li>
-                  <a class="text-gray-600 hover:text-gray-800" style="color: rgb(0, 119, 255)" href="https://tailblocks.cc/">Tailblocks</a>
-                </li>
-                <li>
-                  <a class="text-gray-600 hover:text-gray-800" style="color: rgb(0, 119, 255)" href="https://github.com/Indrajeet2002/cpsc349-project2">Main Github Repo</a>
-                </li>
-              </ul>
-            </nav>
-          </div>
-        </div>
+  </header>
+
+
+  <div>
+    <h2 style="text-align: center;">Blogs</h2>
+    <div class="flex flex-wrap -m-4" style="display: block; margin-left: auto; margin-right: auto;">
+      <div class="p-4 md:w-1/2 w-full" style="display: block; margin-left: auto; margin-right: auto;">
+
+        <!-- LOAD EXISTING POSTS FROM HOME.JS -->
+        <div id="existing-posts-container"></div>
+
       </div>
-      <div class="bg-gray-100" style="position:relative; top: 60px;">
-        <div class="container mx-auto py-4 px-5 flex flex-wrap flex-col sm:flex-row">
-          <p class="text-gray-500 text-sm text-center sm:text-left">© 2022 Blog Engine</p>
-        </div>
+    </div>
+  </div>
+
+  <!-- Create a New Blog Post -->
+  <button class="add-blog" style="display: block; margin-left: auto; margin-right: auto;">Add Blog Post</button>
+
+<footer class="text-gray-600 body-font" style="position:relative; top: auto;">
+  <div
+    class="container px-5 py-24 mx-auto flex md:items-center lg:items-start md:flex-row md:flex-nowrap flex-wrap flex-col">
+    <div class="w-64 flex-shrink-0 md:mx-0 mx-auto text-center md:text-left md:mt-0 mt-10"
+      style="position: relative; top: 150px;">
+      <a class="flex title-font font-medium items-center md:justify-start justify-center text-gray-900">
+        <img src="https://www.onblastblog.com/wp-content/uploads/2017/08/blogger-logo.jpg"
+          class="w-12 h-12 text-white p-2 rounded-full" alt="logo">
+
+
+        <span class="ml-3 text-xl">Blog Engine</span>
+      </a>
+      <p class="mt-2 text-sm text-gray-500">The place to satisfy all your blogging needs</p>
+    </div>
+    <div class="flex-grow flex flex-wrap md:pr-20 -mb-10 md:text-left text-center order-first"
+      style="position: relative; top: 150px; right: auto;">
+      <div class="lg:w-1/4 md:w-1/2 w-full px-4">
+        <h2 class="title-font font-medium text-gray-900 tracking-widest text-sm mb-3" style="font-size: 20px;">Links
+        </h2>
+        <nav class="list-none mb-10">
+          <ul>
+            <li>
+              <a style="color: rgb(0, 119, 255)" href="about">About Us</a>
+            </li>
+            <li>
+              <a class="text-gray-600 hover:text-gray-800" style="color: rgb(0, 119, 255)"
+                href="https://pocketbase.io/">Pocketbase</a>
+            </li>
+            <li>
+              <a class="text-gray-600 hover:text-gray-800" style="color: rgb(0, 119, 255)"
+                href="https://tailblocks.cc/">Tailblocks</a>
+            </li>
+            <li>
+              <a class="text-gray-600 hover:text-gray-800" style="color: rgb(0, 119, 255)"
+                href="https://github.com/Indrajeet2002/cpsc349-project2">Main Github Repo</a>
+            </li>
+          </ul>
+        </nav>
       </div>
-    </footer>
+    </div>
+  </div>
+  <div class="bg-gray-100" style="position:relative; top: 60px;">
+    <div class="container mx-auto py-4 px-5 flex flex-wrap flex-col sm:flex-row">
+      <p class="text-gray-500 text-sm text-center sm:text-left">© 2022 Blog Engine</p>
+    </div>
+  </div>
+</footer>
+
 </body>
-
-
-
 </html>
