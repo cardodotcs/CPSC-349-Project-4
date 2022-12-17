@@ -106,8 +106,8 @@ async function createPostFunction() {
 
     console.log("within create post function")
 
-    var myHeadline = document.getElementById("my-headline").value;
-    var myBody = document.getElementById("my-body").value
+    var myHeadline = document.getElementById("create-headline").value;
+    var myBody = document.getElementById("create-body").value
     // var myUserId = "qjnrpg0p3aybdon"
 
     console.log("Getting create post Input")
