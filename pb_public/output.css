@@ -3889,6 +3889,19 @@ textarea.form-control.is-invalid {
   width: 24rem;
 }
 
+.w-max {
+  width: -moz-max-content;
+  width: max-content;
+}
+
+.w-9 {
+  width: 2.25rem;
+}
+
+.w-screen {
+  width: 100vw;
+}
+
 .flex-shrink-0 {
   flex-shrink: 0;
 }
@@ -4645,5 +4658,13 @@ textarea.form-control.is-invalid {
 @media (min-width: 1280px) {
   .xl\:w-96 {
     width: 24rem;
+  }
+
+  .xl\:w-full {
+    width: 100%;
+  }
+
+  .xl\:w-screen {
+    width: 100vw;
   }
 }
