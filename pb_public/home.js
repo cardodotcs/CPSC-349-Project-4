@@ -2,6 +2,7 @@ import { pb } from './main.js'
 
 var Username = sessionStorage.getItem('Username');
 var Password = sessionStorage.getItem('Password');
+var UserId = sessionStorage.getItem('UserId');
 // get user id from session storage
 
 console.log("home page")
@@ -107,7 +108,7 @@ async function createPostFunction() {
 
     var myHeadline = document.getElementById("my-headline").value;
     var myBody = document.getElementById("my-body").value
-    var myUserId = "qjnrpg0p3aybdon"
+    // var myUserId = "qjnrpg0p3aybdon"
 
     console.log("Getting create post Input")
     console.log("")
@@ -117,7 +118,7 @@ async function createPostFunction() {
     const postRecord = await pb.collection('posts').create({
         headline: myHeadline,
         body: myBody,
-        user: myUserId,
+        user: UserId,
     })
 
 
