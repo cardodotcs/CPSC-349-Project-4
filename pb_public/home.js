@@ -102,11 +102,11 @@ for (const record of records) {
 
 async function createPostFunction() {
 
-
     console.log("within create post function")
 
     var myHeadline = document.getElementById("my-headline").value;
     var myBody = document.getElementById("my-body").value
+    var myUserId = "qjnrpg0p3aybdon"
 
     console.log("Getting create post Input")
     console.log("")
@@ -116,6 +116,7 @@ async function createPostFunction() {
     const postRecord = await pb.collection('posts').create({
         headline: myHeadline,
         body: myBody,
+        user: myUserId,
     })
 
 
