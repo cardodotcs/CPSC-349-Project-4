@@ -33,7 +33,6 @@ async function loginInfo() {
     console.log("pb.authStore.token" + pb.authStore.token);
     console.log("pb.authStore.model.id " + pb.authStore.model.id);
 
-
     if (pb.authStore.isValid) {
         //alert("You are a user that exists!")
 
@@ -49,7 +48,6 @@ async function loginInfo() {
        window.location.replace('home.html')
 
     }
-
     // "logout" the last authenticated account
     // pb.authStore.clear();
 
