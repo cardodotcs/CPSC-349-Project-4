@@ -2,6 +2,7 @@ import { pb } from './main.js'
 
 var Username = sessionStorage.getItem('Username');
 var Password = sessionStorage.getItem('Password');
+var UserId = sessionStorage.getItem('UserId');
 // get user id from session storage
 
 console.log("home page")
@@ -104,25 +105,22 @@ for (const record of records) {
 async function createPostFunction() {
 
     console.log("within create post function")
+    
+    var myHeadline = document.getElementById("create-headline").value;
+    var myBody = document.getElementById("create-body").value
+    let myImage = document.getElementById('fileInput').files[0];
+    
+    let formData = new FormData();
 
-    var myHeadline = document.getElementById("my-headline").value;
-    var myBody = document.getElementById("my-body").value
-    var myUserId = "qjnrpg0p3aybdon"
+    // set headline text field value 
+    formData.append('headline', myHeadline);
+    formData.append('featured_image', myImage);
+    formData.append('user', UserId);
+    formData.append('body', myBody);
+  
 
-    console.log("Getting create post Input")
-    console.log("")
-    console.log(myHeadline)
-    console.log(myBody)
-
-    const postRecord = await pb.collection('posts').create({
-        headline: myHeadline,
-        body: myBody,
-        user: myUserId,
-    })
-
-
-
-
+    // upload and create new record
+    const createdRecord = await pb.collection('posts').create(formData);
 }
 
 
