@@ -33,15 +33,15 @@ for (const record of records) {
     const article = document.createElement('article')
     article.setAttribute('record-post-id', record.id)
 
-        //add style to article
-        article.classList.add('border-8', 'border-indigo-600', 'm-3')
+    //add style to article
+    article.classList.add('border-8', 'border-indigo-600', 'm-3')
 
     // CREATE HEADING 2 ELEMENT
     const headline = document.createElement('h2')
     headline.textContent = record.headline
 
-        // add style to headline
-        headline.classList.add('bg-red-500')
+    // add style to headline
+    headline.classList.add('bg-red-500')
 
     article.appendChild(headline)
 
@@ -53,9 +53,9 @@ for (const record of records) {
     console.log(featuredImageSrc)
     featuredImage.setAttribute('src', featuredImageSrc)
 
-        // add style to featured_image
-        featuredImage.classList.add('w-16','h-auto')
-        
+    // add style to featured_image
+    featuredImage.classList.add('w-16','h-auto')
+
 
     article.appendChild(featuredImage)
 
@@ -76,9 +76,9 @@ for (const record of records) {
 
     authorByLine.textContent = recordUserName.name
 
-        // add style to author by line
-        authorByLine.classList.add('text-purple-400')
-    
+    // add style to author by line
+    authorByLine.classList.add('text-purple-400')
+
     article.appendChild(authorByLine)
 
 
@@ -86,8 +86,8 @@ for (const record of records) {
     const body = document.createElement('p')
     body.textContent = record.body
 
-        // add style to body 
-        body.classList.add('text-center')
+    // add style to body 
+    body.classList.add('text-center')
 
     article.appendChild(body)
 
@@ -96,7 +96,45 @@ for (const record of records) {
 }
 
 
+// ***************CREATE NEW POST FOR LOGGED IN USER***********
 
+// get create post variables from html DOM
+var createHeadline = document.getElementById('create-headline').value
+// create image file upload 
+var createBody = document.getElementById('create-body')
+
+console.log(createHeadline)
+
+
+// createPostButton function
+async function createPost() {
+    console.log('calling createPost()')
+
+    const createPost = await pb.collection('posts').create({
+        headline: createHeadline,
+        body: createBody,
+        // email: email,
+        // password: password,
+        // passwordConfirm: passwordConfirm,
+        // name: name,
+    });
+
+    console.log(createPost.headline)
+    console.log("end of createPostButton() function call")
+}
+
+// event listener for create post button
+const createPostButton = document.getElementById('create-post-button')
+
+if (createPostButton) {
+    createPostButton.addEventListener('click', createPost)
+}
+
+
+
+
+
+// ************************LOG OUT USER************************
 // TO DO
 // Done by R
 // NEED TO CLEAR USERNAME AND LOGIN ONCE USER PRESSES LOGOUT BUTTON
