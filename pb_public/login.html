@@ -16,24 +16,24 @@
   <script type="module" src="login.js"></script>
 </head>
 
-<body data-user-is-not-logged-in data-user-is-not-page-author data-base-route>
+<body class="bg-[#121942] text-white font-mono" data-user-is-not-logged-in data-user-is-not-page-author data-base-route>
   <header class="text-gray-600 body-font">
     <div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
-      <nav class="flex lg:w-2/5 flex-wrap items-center text-base md:ml-auto">
-        <a class="mr-5 hover:text-gray-900" style="color: rgb(0, 119, 255)" href="/">Home</a>
-        <a class="mr-5 hover:text-gray-900" style="color: rgb(0, 119, 255)" href="about.html">About</a>
+      <nav class="flex lg:w-2/5 flex-wrap items-center text-white md:ml-auto">
+        <a class="mr-5 hover:text-gray-500 href="/">Home</a>
+        <a class="mr-5 hover:text-gray-500" href="about.html">About</a>
       </nav>
       <a
         class="flex order-first lg:order-none lg:w-1/5 title-font font-medium items-center text-gray-900 lg:items-center lg:justify-center mb-4 md:mb-0">
-        <img src="https://www.onblastblog.com/wp-content/uploads/2017/08/blogger-logo.jpg"
+        <img src="https://images-platform.99static.com//wTvJ4AUVSP8dm-YK7XY3IyjZ3d4=/128x2141:1864x3877/fit-in/500x500/99designs-contests-attachments/107/107823/attachment_107823549"
           class="w-12 h-12 text-white p-2 rounded-full" alt="logo">
 
 
-        <span class="ml-3 text-xl" style="color: rgb(0, 119, 255)">Blog Engine</span>
+        <span class="ml-3 text-xl text-white">Blog Engine</span>
       </a>
       <div class="lg:w-2/5 inline-flex lg:justify-end ml-5 lg:ml-0">
-        <a class="inline-flex items-center bg-gray-100 border-0 py-1 px-3 focus:outline-none hover:bg-gray-200 rounded text-base mt-4 md:mt-0"
-          href=""> Log in
+        <a class="inline-flex items-center border-0 py-1 px-3 focus:outline-none bg-[#1B2663] hover:bg-[#273791] rounded text-white mt-4 md:mt-0"
+          href="login.html"> Log in
           <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
             class="w-4 h-4 ml-1" viewBox="0 0 24 24">
             <path d="M5 12h14M12 5l7 7-7 7"></path>
@@ -44,52 +44,48 @@
   </header>
   <!-- LOGIN FORM to recieve username and password input from button click-->
   <form>
-    <section class="text-gray-600 body-font">
+    <section class="text-gray-300 body-font">
 
-      <div class="container px-5 py-24 mx-auto flex flex-wrap items-center">
-        <div class="lg:w-3/5 md:w-1/2 md:pr-16 lg:pr-0 pr-0">
-          <h1 class="title-font font-medium text-3xl text-gray-900">Now that you have an account, log in to start
-            blogging!</h1>
-        </div>
+      <div class="container px-5 py-24 mx-auto flex flex-wrap items-center justify-center content-center">
 
-        <div class="lg:w-2/6 md:w-1/2 bg-gray-100 rounded-lg p-8 flex flex-col md:ml-auto w-full mt-10 md:mt-0">
-          <h2 class="text-gray-900 text-lg font-medium title-font mb-5">Login</h2>
+        <div class="lg:w-2/6 md:w-1/2 bg-[#1B2663] rounded-lg p-8 flex flex-col w-full justify-center content-center mt-10 md:mt-0">
+          <h2 class="text-white text-lg font-medium title-font mb-5">Login</h2>
           <div class="relative mb-4">
-            <label class="leading-7 text-sm text-gray-600">Username</label>
+            <label class="leading-7 text-sm text-gray-200">username</label>
             <input type="text" id="username" name="username" placeholder="username"
-              class="w-full bg-white rounded border border-gray-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
+              class="w-full bg-white rounded border border-gray-200 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
               required>
           </div>
 
           <div class="relative mb-4">
-            <label class="leading-7 text-sm text-gray-600">password</label>
+            <label class="leading-7 text-sm text-gray-200">password</label>
             <input type="password" id="password" name="password" placeholder="password"
               class="w-full bg-white rounded border border-gray-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
               required>
           </div>
 
           <button id="login-button"
-            class="text-white bg-indigo-500 border-0 py-2 px-8 focus:outline-none hover:bg-indigo-600 rounded text-lg"
+            class="text-white bg-[#2B3C9E] border-0 py-2 px-8 focus:outline-none hover:bg-[#384ECF] rounded text-lg"
             type="button">Log in</button>
-          <a href="forgot" style="color: rgb(0, 119, 255)">Forgot your password?</a>
-          <a href="signup.html" style="color: rgb(0, 119, 255)">Don't have an account? sign up here</a>
+          <a class="pt-2"href="forgot" style="color: rgb(124, 134, 163)">Forgot your password?</a>
+          <a href="signup.html" style="color: rgb(124, 134, 163)">Don't have an account? sign up here</a>
         </div>
 
       </div>
     </section>
   </form>
-
+  <h1 class="justify-center text-5xl text-center mx-auto">Get Started Now!</h1>
   <footer class="text-gray-600 body-font" style="position:relative; top: auto;">
     <div
       class="container px-5 py-24 mx-auto flex md:items-center lg:items-start md:flex-row md:flex-nowrap flex-wrap flex-col">
       <div class="w-64 flex-shrink-0 md:mx-0 mx-auto text-center md:text-left md:mt-0 mt-10"
         style="position: relative; top: 150px;">
         <a class="flex title-font font-medium items-center md:justify-start justify-center text-gray-900">
-          <img src="https://www.onblastblog.com/wp-content/uploads/2017/08/blogger-logo.jpg"
+          <img src="https://images-platform.99static.com//wTvJ4AUVSP8dm-YK7XY3IyjZ3d4=/128x2141:1864x3877/fit-in/500x500/99designs-contests-attachments/107/107823/attachment_107823549"
             class="w-12 h-12 text-white p-2 rounded-full" alt="logo">
 
 
-          <span class="ml-3 text-xl">Blog Engine</span>
+          <span class="ml-3 text-xl text-white">Blog Engine</span>
         </a>
         <p class="mt-2 text-sm text-gray-500">The place to satisfy all your blogging needs</p>
       </div>
@@ -101,35 +97,32 @@
           <nav class="list-none mb-10">
             <ul>
               <li>
-                <a style="color: rgb(0, 119, 255)" href="about">About Us</a>
+                <a style="color: rgb(124, 134, 163)" href="./about.html">About Us</a>
               </li>
               <li>
-                <a class="text-gray-600 hover:text-gray-800" style="color: rgb(0, 119, 255)"
-                  href="https://pocketbase.io/">Pocketbase</a>
+                <a class="text-gray-600 hover:text-gray-800" style="color: rgb(124, 134, 163)" href="https://pocketbase.io/">Pocketbase</a>
               </li>
               <li>
-                <a class="text-gray-600 hover:text-gray-800" style="color: rgb(0, 119, 255)"
+                <a class="text-gray-600 hover:text-gray-800" style="color: rgb(124, 134, 163)"
                   href="https://tailblocks.cc/">Tailblocks</a>
               </li>
               <li>
-                <a class="text-gray-600 hover:text-gray-800" style="color: rgb(0, 119, 255)" href="https://www.pexels.com/">pexels</a>
+                <a class="text-gray-600 hover:text-gray-800" style="color: rgb(124, 134, 163)" href="https://www.pexels.com/">pexels</a>
               </li>
               <li>
-                <a class="text-gray-600 hover:text-gray-800" style="color: rgb(0, 119, 255)"
-                  href="https://github.com/Indrajeet2002/cpsc349-project2">Main Github Repo</a>
+                <a class="text-gray-600 hover:text-gray-800" style="color: rgb(124, 134, 163)"
+                  href="https://github.com/cardogg/CPSC-349-Project-4">Main Github Repo</a>
               </li>
             </ul>
           </nav>
         </div>
       </div>
     </div>
-
-    <div class="bg-gray-100" style="position:relative; top: 60px;">
+    <div class="bg-[#172157]" style="position:relative; top: 60px;">
       <div class="container mx-auto py-4 px-5 flex flex-wrap flex-col sm:flex-row">
         <p class="text-gray-500 text-sm text-center sm:text-left">© 2022 Blog Engine</p>
       </div>
     </div>
-    
   </footer>
 
 </body>
