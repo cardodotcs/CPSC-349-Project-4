@@ -2,6 +2,7 @@ import { pb } from './main.js'
 
 var Username = sessionStorage.getItem('Username');
 var Password = sessionStorage.getItem('Password');
+// get user id from session storage
 
 console.log("home page")
 console.log(Username)
