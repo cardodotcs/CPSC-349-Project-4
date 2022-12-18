@@ -52,14 +52,16 @@ for (const record of records) {
     // i am adding uploading images (using admin ui) i got from pexels btw we probably need to make a note of that to credit pexels
     const featuredImage = document.createElement('img')
     const featuredImageSrc = 'http://127.0.0.1:8090/api/files/posts/' + record.id + '/' + record.featured_image + '?thumb=0x500'
-    console.log(featuredImageSrc)
-    featuredImage.setAttribute('src', featuredImageSrc)
+    //if (record.featuredImageSrc) {
+        console.log(record.featured_image != 'N/A')
+        featuredImage.setAttribute('src', featuredImageSrc) 
+        featuredImage.classList.add('w-25', 'h-auto', 'object-center', 'justify-center', 'mx-auto', 'p-3')
+
+        article.appendChild(featuredImage)
+    //}
+    
 
     // add style to featured_image
-    featuredImage.classList.add('w-16', 'h-auto')
-
-
-    article.appendChild(featuredImage)
 
 
     // CREATE Header 3 Element (to display username) and append it as a child element to article
@@ -92,7 +94,6 @@ for (const record of records) {
     body.classList.add('text-center')
 
     article.appendChild(body)
-
 
     existingPostsContainer.appendChild(article)
 }
