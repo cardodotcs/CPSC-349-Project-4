@@ -4058,6 +4058,11 @@ textarea.form-control.is-invalid {
   border-color: rgb(79 70 229 / var(--tw-border-opacity));
 }
 
+.border-\[\#1B2663\] {
+  --tw-border-opacity: 1;
+  border-color: rgb(27 38 99 / var(--tw-border-opacity));
+}
+
 .bg-gray-100 {
   --tw-bg-opacity: 1;
   background-color: rgb(243 244 246 / var(--tw-bg-opacity));
@@ -4167,6 +4172,10 @@ textarea.form-control.is-invalid {
 
 .p-12 {
   padding: 3rem;
+}
+
+.p-3 {
+  padding: 0.75rem;
 }
 
 .py-1 {

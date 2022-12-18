@@ -36,14 +36,14 @@ for (const record of records) {
     article.setAttribute('record-post-id', record.id)
 
     //add style to article
-    article.classList.add('border-8', 'border-indigo-600', 'm-3')
+    article.classList.add('border-8', 'border-[#1B2663]', 'm-3')
 
     // CREATE HEADING 2 ELEMENT
     const headline = document.createElement('h2')
     headline.textContent = record.headline
 
     // add style to headline
-    headline.classList.add('bg-red-500')
+    headline.classList.add('bg-[#1B2663]')
 
     article.appendChild(headline)
 
@@ -79,7 +79,7 @@ for (const record of records) {
     authorByLine.textContent = recordUserName.name
 
     // add style to author by line
-    authorByLine.classList.add('text-purple-400')
+    authorByLine.classList.add('text-gray-300', 'text-center', 'p-3')
 
     article.appendChild(authorByLine)
 
