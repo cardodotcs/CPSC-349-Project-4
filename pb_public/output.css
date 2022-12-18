@@ -4122,6 +4122,15 @@ textarea.form-control.is-invalid {
   background-color: rgb(43 60 158 / var(--tw-bg-opacity));
 }
 
+.bg-\[bg-\\\[\\\#172157\\\]\] {
+  background-color: bg-\[\#172157\];
+}
+
+.bg-\[\#384ECF\] {
+  --tw-bg-opacity: 1;
+  background-color: rgb(56 78 207 / var(--tw-bg-opacity));
+}
+
 .bg-clip-padding {
   background-clip: padding-box;
 }
@@ -4154,6 +4163,10 @@ textarea.form-control.is-invalid {
 
 .p-1 {
   padding: 0.25rem;
+}
+
+.p-12 {
+  padding: 3rem;
 }
 
 .py-1 {
@@ -4294,6 +4307,11 @@ textarea.form-control.is-invalid {
 .text-5xl {
   font-size: 3rem;
   line-height: 1;
+}
+
+.text-4xl {
+  font-size: 2.25rem;
+  line-height: 2.5rem;
 }
 
 .font-medium {
@@ -4508,6 +4526,11 @@ textarea.form-control.is-invalid {
 .hover\:bg-\[\#384ECF\]:hover {
   --tw-bg-opacity: 1;
   background-color: rgb(56 78 207 / var(--tw-bg-opacity));
+}
+
+.hover\:bg-\[\#3D56E3\]:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(61 86 227 / var(--tw-bg-opacity));
 }
 
 .hover\:text-gray-900:hover {
