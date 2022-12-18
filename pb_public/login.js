@@ -5,7 +5,7 @@ import { pb } from './main.js'
 // Log in the User if they Exist in the Database
 //var Username = localStorage.getItem('Username');
 //if(Username){
-    //window.location.replace('home.html')
+//window.location.replace('home.html')
 //}
 async function loginInfo() {
 
@@ -14,41 +14,53 @@ async function loginInfo() {
     var password = document.getElementById("password").value
 
     console.log("your username is " + username + " and your password is " + password)
-    
+
+
     // currently only logging in users collection
-    const userData = await pb.collection('users').authWithPassword(
-        username,
-        password,
-    );
 
-    console.log(userData)
-    console.log(userData.record)
-    console.log("user email info " + userData.record.email)
-    console.log("user id info " + userData.record.id)
-    
-    var userId = userData.record.id
+    try {
+        const userData = await pb.collection('users').authWithPassword(
+            username,
+            password,
+        );
 
-    // after the above you can also access the auth data from the authStore
-    console.log("pb.authStore.isValid" + pb.authStore.isValid);
-    console.log("pb.authStore.token" + pb.authStore.token);
-    console.log("pb.authStore.model.id " + pb.authStore.model.id);
+        console.log(userData)
+        console.log(userData.record)
+        console.log("user email info " + userData.record.email)
+        console.log("user id info " + userData.record.id)
 
-    if (pb.authStore.isValid) {
-        //alert("You are a user that exists!")
+        var userId = userData.record.id
+
+        // after the above you can also access the auth data from the authStore
+        console.log("pb.authStore.isValid" + pb.authStore.isValid);
+        console.log("pb.authStore.token" + pb.authStore.token);
+        console.log("pb.authStore.model.id " + pb.authStore.model.id);
+
+        if (pb.authStore.isValid) {
+            //alert("You are a user that exists!")
 
 
-        //
-        localStorage.setItem('Username', username);
+            //
+            localStorage.setItem('Username', username);
 
-        localStorage.setItem('Password', password);
+            localStorage.setItem('Password', password);
 
-        localStorage.setItem('UserId', userId);
-        
+            localStorage.setItem('UserId', userId);
 
-       // if the user exists redirect them to home page (aka blog page)
-       window.location.replace('home.html')
 
+            // if the user exists redirect them to home page (aka blog page)
+            window.location.replace('home.html')
+
+        }
+
+    } catch (err) {
+        console.log(err);
+        console.log("BAD CREDENTIALS")
     }
+
+
+
+
     // "logout" the last authenticated account
     // pb.authStore.clear();
 
@@ -63,7 +75,7 @@ const testing = document.getElementById("testing")
 
 // Add Event Listener to Login Button (if it exists) and Listen for Click Event. Run Login Function if clicked. 
 if (loginButton) {
-loginButton.addEventListener('click', loginInfo)
+    loginButton.addEventListener('click', loginInfo)
 }
 
 
