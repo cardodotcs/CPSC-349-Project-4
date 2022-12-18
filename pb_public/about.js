@@ -1,7 +1,7 @@
 import { pb } from './main.js'
 
-var Username = sessionStorage.getItem('Username');
-var Password = sessionStorage.getItem('Password');
+var Username = localStorage.getItem('Username');
+var Password = localStorage.getItem('Password');
 
 console.log("about page")
 console.log(Username)
@@ -16,6 +16,6 @@ if(Username){
 }
 
 async function logout() {
-    sessionStorage.clear()
+    localStorage.clear()
 }
 

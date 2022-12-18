@@ -46,7 +46,7 @@
   <form onsubmit="return false;">
     <section class="text-gray-300 body-font">
 
-      <div class="container px-5 py-24 mx-auto flex flex-wrap items-center justify-center content-center">
+      <div class="container px-5 pt-24 pb-12 mx-auto flex flex-wrap items-center justify-center content-center">
 
         <div class="lg:w-2/6 md:w-1/2 bg-[#1B2663] rounded-lg p-8 flex flex-col w-full justify-center content-center mt-10 md:mt-0">
           <h2 class="text-white text-lg font-medium title-font mb-5">Login</h2>
@@ -74,7 +74,29 @@
       </div>
     </section>
   </form>
-  
+
+  <!-- throw error if login credentials are wrong -->
+
+  <section id="error-login-alert" class="invisible text-gray-300 body-font">
+
+    <div class="container px-5 pb-12 mx-auto flex flex-wrap items-center justify-center content-center">
+
+      <div class="lg:w-2/6 md:w-1/2 bg-[#1B2663] rounded-lg flex flex-col w-full justify-center content-center mt-10 md:mt-0">
+        <div class="bg-red-100 rounded-lg py-5 px-6 text-sm text-red-700 inline-flex items-center w-full" role="alert">
+          <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="times-circle" class="w-4 h-4 mr-2 fill-current" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+            <path fill="currentColor" d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8zm121.6 313.1c4.7 4.7 4.7 12.3 0 17L338 377.6c-4.7 4.7-12.3 4.7-17 0L256 312l-65.1 65.6c-4.7 4.7-12.3 4.7-17 0L134.4 338c-4.7-4.7-4.7-12.3 0-17l65.6-65-65.6-65.1c-4.7-4.7-4.7-12.3 0-17l39.6-39.6c4.7-4.7 12.3-4.7 17 0l65 65.7 65.1-65.6c4.7-4.7 12.3-4.7 17 0l39.6 39.6c4.7 4.7 4.7 12.3 0 17L312 256l65.6 65.1z"></path>
+          </svg>
+          Incorrect Credentials - Try Again!
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- end of throw error  -->
+
+
   <h1 class="justify-center text-5xl text-center mx-auto">Welcome Back</h1>
 
   <footer class="text-gray-600 body-font" style="position:relative; top: auto;">
