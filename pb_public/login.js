@@ -3,7 +3,7 @@ import { pb } from './main.js'
 // i made a login.js page but I am not sure if we are just going to use one js file instead because of the Pocketbase line above. We can just rename it to main.js 
 
 // Log in the User if they Exist in the Database
-//var Username = sessionStorage.getItem('Username');
+//var Username = localStorage.getItem('Username');
 //if(Username){
     //window.location.replace('home.html')
 //}
@@ -38,11 +38,11 @@ async function loginInfo() {
 
 
         //
-        sessionStorage.setItem('Username', username);
+        localStorage.setItem('Username', username);
 
-        sessionStorage.setItem('Password', password);
+        localStorage.setItem('Password', password);
 
-        sessionStorage.setItem('UserId', userId);
+        localStorage.setItem('UserId', userId);
         
 
        // if the user exists redirect them to home page (aka blog page)
