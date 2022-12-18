@@ -122,6 +122,8 @@ async function createPostFunction() {
 
     // upload and create new record
     const createdRecord = await pb.collection('posts').create(formData);
+
+    window.location.reload()
 }
 
 
