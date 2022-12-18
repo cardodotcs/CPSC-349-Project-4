@@ -53,11 +53,14 @@ for (const record of records) {
     const featuredImage = document.createElement('img')
     const featuredImageSrc = 'http://127.0.0.1:8090/api/files/posts/' + record.id + '/' + record.featured_image + '?thumb=0x500'
     //if (record.featuredImageSrc) {
-        console.log(record.featured_image != 'N/A')
         featuredImage.setAttribute('src', featuredImageSrc) 
         featuredImage.classList.add('w-25', 'h-auto', 'object-center', 'justify-center', 'mx-auto', 'p-3')
 
-        article.appendChild(featuredImage)
+        console.log(record.featured_image )
+        if (record.featured_image != '') {
+            article.appendChild(featuredImage)
+        }
+        
     //}
     
 
