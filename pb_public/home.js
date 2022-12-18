@@ -39,12 +39,23 @@ for (const record of records) {
     article.classList.add('border-8', 'border-[#1B2663]', 'm-3')
 
     // CREATE HEADING 2 ELEMENT
-    const headline = document.createElement('h2')
-    headline.textContent = record.headline
+    const headline = document.createElement('div') 
+    headline.classList.add('container', 'inline-flex', 'flex-col', 'md:flex-row')
+    const title = document.createElement('h2')
+    title.classList.add('flex', 'basis-11/12', 'p-3')
+    title.textContent = record.headline
+    headline.appendChild(title)
+    
 
     // add style to headline
     headline.classList.add('bg-[#1B2663]')
+    
+    const deleteButt = document.createElement('button')
+    deleteButt.classList.add('text-red-600','flex','content-end','basis-1/12','p-3', 'pl-12', 'text-end')
+    deleteButt.setAttribute('id', 'deleteText')
+    deleteButt.textContent = "x"
 
+    headline.appendChild(deleteButt)
     article.appendChild(headline)
 
     // MAYBE just remove image if we cant get it to display right
@@ -96,6 +107,7 @@ for (const record of records) {
     article.appendChild(body)
 
     existingPostsContainer.appendChild(article)
+
 }
 
 
@@ -152,6 +164,12 @@ async function logout() {
     sessionStorage.clear()
 }
 
+async function testFunction() {
+    
+}
+
+const deleteButtFirst = document.getElementById("deleteText")
+deleteButtFirst.addEventListener('click', testFunction)
 // TO DO
 // Done by shiv
 // need to make sure that when we click on the home button it doesn't go to index.html
