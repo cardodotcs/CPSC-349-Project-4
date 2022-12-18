@@ -36,5 +36,26 @@ We are using the [prebuilt minimal PocketBase app][3] for **Linux**.
 [3]: https://pocketbase.io/docs/
 
 
+## Demo Account Information 
+
+We used our csuf emails for the Admin UI and password is `password1.`
+
+
+test user accounts
+
+```
+john
+lavonte.trigg@falltrack.net
+kbgme3H$
+is verified
+
+samantha
+nakoa.vasco@falltrack.net
+mdawf9E@
+not verified
+
+daysmachine
+12345678
+```
 
 
