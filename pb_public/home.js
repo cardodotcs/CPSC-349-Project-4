@@ -52,16 +52,13 @@ for (const record of records) {
     // i am adding uploading images (using admin ui) i got from pexels btw we probably need to make a note of that to credit pexels
     const featuredImage = document.createElement('img')
     const featuredImageSrc = 'http://127.0.0.1:8090/api/files/posts/' + record.id + '/' + record.featured_image + '?thumb=0x500'
-    //if (record.featuredImageSrc) {
         featuredImage.setAttribute('src', featuredImageSrc) 
         featuredImage.classList.add('w-25', 'h-auto', 'object-center', 'justify-center', 'mx-auto', 'p-3')
 
-        console.log(record.featured_image )
         if (record.featured_image != '') {
             article.appendChild(featuredImage)
         }
         
-    //}
     
 
     // add style to featured_image
@@ -156,7 +153,3 @@ async function logout() {
 // TO DO
 // Done by shiv
 // need to make sure that when we click on the home button it doesn't go to index.html
-
-if (Username) {
-    document.getElementById("home").href = "/home.html"
-}
