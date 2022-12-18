@@ -1,8 +1,8 @@
 import { pb } from './main.js'
 
-var Username = sessionStorage.getItem('Username');
-var Password = sessionStorage.getItem('Password');
-var UserId = sessionStorage.getItem('UserId');
+var Username = localStorage.getItem('Username');
+var Password = localStorage.getItem('Password');
+var UserId = localStorage.getItem('UserId');
 // get user id from session storage
 
 console.log("home page")
@@ -152,7 +152,7 @@ if (createPostButton) {
 // TO DO
 // Done by R
 // NEED TO CLEAR USERNAME AND LOGIN ONCE USER PRESSES LOGOUT BUTTON
-// sessionStorage.clear();
+// localStorage.clear();
 const logoutButt = document.getElementById("logout")
 
 // Add Event Listener to Login Button (if it exists) and Listen for Click Event. Run Login Function if clicked. 
@@ -161,7 +161,7 @@ if (logoutButt) {
 }
 
 async function logout() {
-    sessionStorage.clear()
+    localStorage.clear()
 }
 
 async function testFunction() {
