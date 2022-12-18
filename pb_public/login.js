@@ -31,10 +31,6 @@ async function loginInfo() {
         console.log("pb.authStore.model.id " + pb.authStore.model.id);
 
         if (pb.authStore.isValid) {
-            //alert("You are a user that exists!")
-
-
-            //
             localStorage.setItem('Username', username);
 
             localStorage.setItem('Password', password);
@@ -60,14 +56,6 @@ async function loginInfo() {
 
 
     }
-
-
-
-
-    // "logout" the last authenticated account
-    // pb.authStore.clear();
-
-    // not sure if i should be calling clear() here or once user presses logout button 
 }
 
 // Find login-button in the DOM by id and assign it to a javascript variable
